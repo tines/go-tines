@@ -21,6 +21,7 @@ func main() {
 	tinesClient, err := tines.NewClient(nil, base, userEmail, userToken)
 	agent, resp, err := tinesClient.Agent.Get(173)
 	fmt.Printf("%+v, %+v, %+v", agent, resp, err)
+}
 ```
 
 ## Call a not implemented API endpoint
