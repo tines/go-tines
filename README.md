@@ -69,13 +69,10 @@ Create Global Resource:
 
 ```
 ...
-	custom := tcontainer.NewMarshalMap()
-	custom["value"] = string("{\"key\": \"value\"}")
-
 	gr := tines.GlobalResource{
 		Name:      "NewResource",
 		ValueType: "json",
-		Unknowns:  custom,
+		Value:  "{\"key\": \"value\"}",
 	}
 	
 	globalresource, resp, err := tinesClient.GlobalResource.Create(&gr)
