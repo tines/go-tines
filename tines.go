@@ -26,10 +26,11 @@ type Client struct {
 	client httpClient
 
 	// Base URL for API requests.
-	baseURL   *url.URL
-	userToken string
-	userEmail string
-	Agent     *AgentService
+	baseURL        *url.URL
+	userToken      string
+	userEmail      string
+	Agent          *AgentService
+	GlobalResource *GlobalResourceService
 }
 
 // NewClient returns a new Tines API client.
@@ -58,6 +59,7 @@ func NewClient(httpClient httpClient, baseURL string, userEmail string, userToke
 		userToken: userToken,
 	}
 	c.Agent = &AgentService{client: c}
+	c.GlobalResource = &GlobalResourceService{client: c}
 
 	return c, nil
 }

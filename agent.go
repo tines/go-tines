@@ -181,7 +181,7 @@ func (s *AgentService) UpdateWithContext(ctx context.Context, agentID int, agent
 		return nil, nil, err
 	}
 
-	agentreq := new(Agent)
+	agentresp := new(Agent)
 	resp, err := s.client.Do(req, nil)
 	if err != nil {
 		return nil, resp, err
