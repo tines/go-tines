@@ -4,6 +4,8 @@ Go API client for the Tines API
 
 ## Usage
 
+Get Agent:
+
 ```
 package main
 
@@ -20,6 +22,45 @@ func main() {
   
 	tinesClient, err := tines.NewClient(nil, base, userEmail, userToken)
 	agent, resp, err := tinesClient.Agent.Get(173)
+	fmt.Printf("%+v, %+v, %+v", agent, resp, err)
+}
+```
+
+Create Agent:
+
+```
+package main
+
+import (
+	"fmt"
+
+	"github.com/trivago/tgo/tcontainer"
+
+	"github.com/tuckner/go-tines"
+)
+
+func main() {
+...
+
+	tinesClient, _ := tines.NewClient(nil, base, userEmail, userToken)
+
+	sourceid := make([]string, 0)
+	receiveid := make([]string, 0)
+	custom := tcontainer.NewMarshalMap()
+	custom["options"] = map[string]string{"secret": "secretphrase", "verbs": "get,post"}
+
+	a := tines.Agent{
+		Type:          "Agents::WebhookAgent",
+		Name:          "Created Agent",
+		StoryID:       30,
+		KeepEventsFor: 604800,
+		SourceIds:     sourceid,
+		ReceiverIds:   receiveid,
+		Unknowns:      custom,
+	}
+
+	agent, resp, err := tinesClient.Agent.Create(&a)
+
 	fmt.Printf("%+v, %+v, %+v", agent, resp, err)
 }
 ```
