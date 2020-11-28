@@ -65,6 +65,23 @@ func main() {
 }
 ```
 
+Create Global Resource:
+
+```
+...
+	custom := tcontainer.NewMarshalMap()
+	custom["value"] = string("{\"key\": \"value\"}")
+
+	gr := tines.GlobalResource{
+		Name:      "NewResource",
+		ValueType: "json",
+		Unknowns:  custom,
+	}
+	
+	globalresource, resp, err := tinesClient.GlobalResource.Create(&gr)
+...
+```
+
 ## Call a not implemented API endpoint
 Not all API endpoints of the Tines API are implemented into go-tines. But you can call them anyway.
 
