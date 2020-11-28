@@ -1,6 +1,6 @@
 # Tines Go API Client
 
-Go API client for the Tines API
+Go client for the Tines API
 
 ## Usage
 
