@@ -160,7 +160,7 @@ func (s *AgentService) CreateWithContext(ctx context.Context, agent *Agent) (*Ag
 	}
 
 	agentresp := new(Agent)
-	resp, err := s.client.Do(req, nil)
+	resp, err := s.client.Do(req, agentresp)
 	if err != nil {
 		return nil, resp, err
 	}
@@ -182,7 +182,7 @@ func (s *AgentService) UpdateWithContext(ctx context.Context, agentID int, agent
 	}
 
 	agentresp := new(Agent)
-	resp, err := s.client.Do(req, nil)
+	resp, err := s.client.Do(req, agentresp)
 	if err != nil {
 		return nil, resp, err
 	}
