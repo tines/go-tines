@@ -172,7 +172,7 @@ func (s *GlobalResourceService) UpdateWithContext(ctx context.Context, globalRes
 	}
 
 	globalresourceresp := new(GlobalResource)
-	resp, err := s.client.Do(req, nil)
+	resp, err := s.client.Do(req, globalresourceresp)
 	if err != nil {
 		return nil, resp, err
 	}
