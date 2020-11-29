@@ -150,7 +150,7 @@ func (s *GlobalResourceService) CreateWithContext(ctx context.Context, globalres
 	}
 
 	globalresourceresp := new(GlobalResource)
-	resp, err := s.client.Do(req, nil)
+	resp, err := s.client.Do(req, globalresourceresp)
 	if err != nil {
 		return nil, resp, err
 	}
