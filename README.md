@@ -12,7 +12,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/tuckner/go-tines"
+	"github.com/tuckner/go-tines/tines"
 )
 
 func main() {
@@ -36,7 +36,7 @@ import (
 
 	"github.com/trivago/tgo/tcontainer"
 
-	"github.com/tuckner/go-tines"
+	"github.com/tuckner/go-tines/tines"
 )
 
 func main() {
@@ -89,7 +89,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tuckner/go-tines"
+	"github.com/tuckner/go-tines/tines"
 )
 
 func main() {
