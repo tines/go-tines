@@ -38,8 +38,8 @@ type Agent struct {
 	Disabled           bool        `json:"disabled" structs:"disabled,omitempty"`
 	GUID               string      `json:"guid" structs:"guid,omitempty"`
 	StoryID            int         `json:"story_id" structs:"story_id"`
-	SourceIds          []string    `json:"source_ids" structs:"source_ids,omitempty"`
-	ReceiverIds        []string    `json:"receiver_ids" structs:"receiver_ids,omitempty"`
+	SourceIds          []int       `json:"source_ids" structs:"source_ids,omitempty"`
+	ReceiverIds        []int       `json:"receiver_ids" structs:"receiver_ids,omitempty"`
 	Type               string      `json:"type" structs:"type,omitempty"`
 	Unknowns           tcontainer.MarshalMap
 }
