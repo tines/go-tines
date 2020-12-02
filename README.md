@@ -44,8 +44,8 @@ func main() {
 
 	tinesClient, _ := tines.NewClient(nil, base, userEmail, userToken)
 
-	sourceid := make([]string, 0)
-	receiveid := make([]string, 0)
+	sourceid := make([]int, 0)
+	receiveid := make([]int, 0)
 	custom := tcontainer.NewMarshalMap()
 	custom["options"] = map[string]string{"secret": "secretphrase", "verbs": "get,post"}
 
