@@ -41,7 +41,11 @@ type Agent struct {
 	SourceIds          []int       `json:"source_ids" structs:"source_ids,omitempty"`
 	ReceiverIds        []int       `json:"receiver_ids" structs:"receiver_ids,omitempty"`
 	Type               string      `json:"type" structs:"type,omitempty"`
-	Unknowns           tcontainer.MarshalMap
+	Position           struct {
+		X float64 `json:"x"`
+		Y float64 `json:"y"`
+	} `json:"position" structs:"position,omitempty"`
+	Unknowns tcontainer.MarshalMap
 }
 
 // MarshalJSON is a custom JSON marshal function for the Agent* structs.
