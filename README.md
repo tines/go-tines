@@ -73,6 +73,7 @@ Create Global Resource:
 		Name:      "NewResource",
 		ValueType: "json",
 		Value:  "{\"key\": \"value\"}",
+		TeamID: 3
 	}
 	
 	globalresource, resp, err := tinesClient.GlobalResource.Create(&gr)
