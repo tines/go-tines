@@ -13,10 +13,7 @@ type NoteService struct {
 
 // Note structure
 type Note struct {
-<<<<<<< HEAD
 	ID       int         `json:"id" structs:"id,omitempty"`
-=======
->>>>>>> 3c663aa3aa08adc784f76a1dc944076998654576
 	StoryID  int         `json:"story_id" structs:"story_id"`
 	Content  string      `json:"content" structs:"content,omitempty"`
 	Position interface{} `json:"position" structs:"position,omitempty"`
