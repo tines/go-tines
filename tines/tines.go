@@ -32,7 +32,7 @@ type Client struct {
 	Agent          *AgentService
 	GlobalResource *GlobalResourceService
 	Story          *StoryService
-	Note           *NoteService
+	Annotation     *AnnotationService
 	Credential     *CredentialService
 }
 
@@ -64,7 +64,7 @@ func NewClient(httpClient httpClient, baseURL string, userEmail string, userToke
 	c.Agent = &AgentService{client: c}
 	c.GlobalResource = &GlobalResourceService{client: c}
 	c.Story = &StoryService{client: c}
-	c.Note = &NoteService{client: c}
+	c.Annotation = &AnnotationService{client: c}
 	c.Credential = &CredentialService{client: c}
 
 	return c, nil
