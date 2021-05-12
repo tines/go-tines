@@ -165,7 +165,11 @@ func CheckResponse(r *http.Response, req *http.Request) error {
 		return nil
 	}
 
-	err := fmt.Errorf("request failed. Please analyze the request body for more details. Status code: %d. Resp Body: %d. Req URL: %d", r.StatusCode, r.Body, req.URL)
+	buf := new(bytes.Buffer)
+	buf.ReadFrom(r.Body)
+	body := buf.String()
+
+	err := fmt.Errorf("Request failed. Please analyze the request body for more details. Status code: %d. Resp Body: %v. Req URL: %v", r.StatusCode, body, req.URL)
 	return err
 }
 
