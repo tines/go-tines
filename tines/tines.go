@@ -34,6 +34,7 @@ type Client struct {
 	Story          *StoryService
 	Annotation     *AnnotationService
 	Credential     *CredentialService
+	Team           *TeamService
 }
 
 // NewClient returns a new Tines API client.
@@ -66,6 +67,7 @@ func NewClient(httpClient httpClient, baseURL string, userEmail string, userToke
 	c.Story = &StoryService{client: c}
 	c.Annotation = &AnnotationService{client: c}
 	c.Credential = &CredentialService{client: c}
+	c.Team = &TeamService{client: c}
 
 	return c, nil
 }
