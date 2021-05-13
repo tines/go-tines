@@ -23,6 +23,7 @@ type Folder struct {
 	Name        string `json:"name" structs:"name,omitempty"`
 	ContentType string `json:"content_type" structs:"content_type,omitempty"`
 	TeamID      int    `json:"team_id" structs:"team_id,omitempty"`
+	Size        int    `json:"size" structs:"size,omitempty"`
 	Unknowns    tcontainer.MarshalMap
 }
 
