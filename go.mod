@@ -1,4 +1,4 @@
-module github.com/tuckner/go-tines/tines
+module github.com/tuckner/go-tines
 
 go 1.15
 
