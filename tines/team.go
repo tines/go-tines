@@ -20,7 +20,7 @@ type TeamService struct {
 // Team structure
 type Team struct {
 	ID       int    `json:"id" structs:"id,omitempty"`
-	TeamName string `json:"name" structs:"name,omitempty"`
+	Name     string `json:"name" structs:"name,omitempty"`
 	Unknowns tcontainer.MarshalMap
 }
 
