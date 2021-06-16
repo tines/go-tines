@@ -28,14 +28,14 @@ type Story struct {
 	UpdatedAt          time.Time   `json:"updated_at" structs:"updated_at,omitempty"`
 	Description        string      `json:"description" structs:"description,omitempty"`
 	GUID               string      `json:"guid" structs:"guid,omitempty"`
-	SendToStoryEnabled bool        `json:"send_to_story_enabled" structs:"send_to_story_enabled,omitempty"`
+	SendToStoryEnabled *bool       `json:"send_to_story_enabled" structs:"send_to_story_enabled,omitempty"`
 	SendToStoryAccess  string      `json:"send_to_story_access" structs:"send_to_story_access,omitempty"`
 	EntryAgentID       int         `json:"entry_agent_id" structs:"entry_agent_id,omitempty"`
 	ExitAgents         []int       `json:"exit_agent_ids" structs:"exit_agent_ids,omitempty"`
 	DiagramLayout      interface{} `json:"diagram_layout" structs:"diagram_layout,omitempty"`
-	Disabled           bool        `json:"disabled" structs:"disabled,omitempty"`
+	Disabled           *bool       `json:"disabled" structs:"disabled,omitempty"`
 	KeepEventsFor      int         `json:"keep_events_for" structs:"keep_events_for,omitempty"`
-	Priority           bool        `json:"priority" structs:"priority,omitempty"`
+	Priority           *bool       `json:"priority" structs:"priority,omitempty"`
 	TeamID             int         `json:"team_id" structs:"team_id,omitempty"`
 	FolderID           int         `json:"folder_id" structs:"folder_id,omitempty"`
 	Slug               string      `json:"slug" structs:"slug,omitempty"`
