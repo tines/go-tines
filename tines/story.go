@@ -38,7 +38,7 @@ type Story struct {
 	Priority           bool        `json:"priority" structs:"priority,omitempty"`
 	TeamID             int         `json:"team_id" structs:"team_id,omitempty"`
 	FolderID           int         `json:"folder_id" structs:"folder_id,omitempty"`
-	Slug               string      `json:"slug" structus:"slug,omitempty"`
+	Slug               string      `json:"slug" structs:"slug,omitempty"`
 	Unknowns           tcontainer.MarshalMap
 }
 
