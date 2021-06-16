@@ -31,7 +31,7 @@ type Story struct {
 	SendToStoryEnabled bool        `json:"send_to_story_enabled" structs:"send_to_story_enabled,omitempty"`
 	SendToStoryAccess  string      `json:"send_to_story_access" structs:"send_to_story_access,omitempty"`
 	EntryAgentID       int         `json:"entry_agent_id" structs:"entry_agent_id,omitempty"`
-	ExitAgents         []int       `json:"exit_agents" structs:"exit_agents,omitempty"`
+	ExitAgents         []int       `json:"exit_agent_ids" structs:"exit_agent_ids,omitempty"`
 	DiagramLayout      interface{} `json:"diagram_layout" structs:"diagram_layout,omitempty"`
 	Disabled           bool        `json:"disabled" structs:"disabled,omitempty"`
 	KeepEventsFor      int         `json:"keep_events_for" structs:"keep_events_for,omitempty"`
