@@ -1,0 +1,10 @@
+# github.com/fatih/structs v1.1.0
+## explicit
+github.com/fatih/structs
+# github.com/google/go-querystring v1.1.0
+## explicit
+github.com/google/go-querystring/query
+# github.com/trivago/tgo v1.0.7
+## explicit
+github.com/trivago/tgo/tcontainer
+github.com/trivago/tgo/treflect
